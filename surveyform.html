@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+body{
+    background-color: #a2d5c6;
+    color:  #322e2f;
+}
+label{
+    display: flex;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background:#077b8a;
+  padding: 11%;
+  border-radius: %;
+}
+@media (min-width: 480px) {
+  form {
+    padding: 12%;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color:  #5c3c92;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #5c3c92;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+          <h1 id="title" class="text-center"> Survey Form</h1>
+          <p id="description" class="description text-center">
+            <i> Thank you for taking the time to help us improve the platform
+            </i></p>
+        </header>
+<div class="amit">
+        <form id="survey-form">
+          <div class="form-group">
+            <label id="name-label" for="name">Name*</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email*</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number"
+              >Age*<span class="clue">(optional)</span></label
+            >
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="10"
+              max="99"
+              class="form-control"
+              placeholder="Age"
+            />
+          </div>
+          <div class="form-group">
+            <p>Which option best describes your current role?*</p>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value>Select current role</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>Would you like to contribute into Badega India?*</p>
+            <label>
+              <input
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />Definitely</label
+            >
+            <label>
+              <input
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />Maybe</label
+            >
+      
+            <label
+              ><input
+                name="user-recommend"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+              />Not sure</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>What do you think clean and best place to live in India?*</p>
+            <select id="best-place" name="bestPlace" class="form-control" required>
+              <option disabled selected value>Select an option</option>
+              <option value="Banglore">Banglore</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Ahemdabad">Ahemdabad</option>
+              <option value="Goa">Goa</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>
+              What do you think is the major problems in India?*
+              <span class="clue">(Check all that apply)</span>
+            </p>
+      
+            <label
+              ><input
+                name="prefer"
+                value="Economy"
+                type="checkbox"
+                class="input-checkbox"
+              />Economy</label
+            >
+            <label>
+              <input
+                name="prefer"
+                value="Population"
+                type="checkbox"
+                class="input-checkbox"
+              />Population</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Illiteracy"
+                type="checkbox"
+                class="input-checkbox"
+              />Illiteracy</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Corruption"
+                type="checkbox"
+                class="input-checkbox"
+              />Corruption</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Discrimination"
+                type="checkbox"
+                class="input-checkbox"
+              />Discrimination</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="disastNaturaler"
+                type="checkbox"
+                class="input-checkbox"
+              /> disastNaturaler</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Pollution"
+                type="checkbox"
+                class="input-checkbox"
+              />Pollution</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Politics"
+                type="checkbox"
+                class="input-checkbox"
+              />Politics</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Awareness"
+                type="checkbox"
+                class="input-checkbox"
+              />Awareness</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Lack of infranstructure"
+                type="checkbox"
+                class="input-checkbox"
+              />Lack of infranstructure</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="Lack of schools"
+                type="checkbox"
+                class="input-checkbox"
+              />Lack of schools</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>
